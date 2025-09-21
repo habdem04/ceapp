@@ -242,3 +242,18 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+doc_events = {
+    "Quotation": {
+        "validate": "ceapp.ceapp.quotation.update_weight_based_pricing",
+        "onload": "ceapp.ceapp.quotation.update_weight_based_pricing"
+    },"Sales Order": {
+        "validate": "ceapp.ceapp.quotation.update_weight_based_pricing",
+        "onload": "ceapp.ceapp.quotation.update_weight_based_pricing"
+    },
+    "Item": {
+        "on_update": "ceapp.ceapp.item_price.sync_rebar_prices_from_item"
+    },
+    "Item Price": {
+        "on_update": "ceapp.ceapp.item_price.sync_pcs_price_from_kg_price"
+    }
+}

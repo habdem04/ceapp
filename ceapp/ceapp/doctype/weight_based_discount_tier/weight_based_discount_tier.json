@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-31 14:19:16.716954",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_og3t",
+  "active",
+  "from_metric_ton",
+  "to_metric_ton",
+  "column_break_wq5x",
+  "discount_per_kg",
+  "currency"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_og3t",
+   "fieldtype": "Section Break",
+   "label": "Weight Range & Discount"
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "description": "Minimum weight in metric tons (e.g., 0, 25.001)",
+   "fieldname": "from_metric_ton",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "From (Metric Tons)",
+   "reqd": 1
+  },
+  {
+   "description": "Maximum weight in metric tons (e.g., 25, 50)",
+   "fieldname": "to_metric_ton",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "To (Metric Tons)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_wq5x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Discount amount applied per kilogram",
+   "fieldname": "discount_per_kg",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Discount per KG (ETB)",
+   "reqd": 1
+  },
+  {
+   "default": "ETB",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Currency",
+   "options": "Currency",
+   "reqd": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-31 17:47:20.987152",
+ "modified_by": "Administrator",
+ "module": "CEAPP",
+ "name": "Weight-Based Discount Tier",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
